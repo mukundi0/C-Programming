@@ -5,7 +5,9 @@ struct studentdata
 {
     int student_id;
     int student_age;
-    char* student_name;
+    char student_name[50];
+    //OR char* student_name;
+
     
 };
 
@@ -16,7 +18,8 @@ int main(void){
 struct studentdata student;
 
 //Assigning the values of each struct member here
-student.student_name = "Mukundi";
+strcpy(student.student_name, "Mukundi");
+//OR student.student_name = "Mukundi";
 student.student_age = 19;
 student.student_id = 190044;
 
