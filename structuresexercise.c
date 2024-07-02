@@ -24,15 +24,27 @@ void get_data(struct CDAccount the_account){
     printf("The balance after %d months: %.2f", the_account.terms, computed_balance);
 }
 
-int main(){
-    
-    //values entered
+void input_data(struct CDAccount){
     printf("Enter the balance: ");
     scanf("%lf",&CDAccount.balance);
     printf("Enter the interest rate: ");
     scanf("%lf",&CDAccount.interest_rate);
     printf("Enter the terms (number of months): ");
     scanf("%d",&CDAccount.terms);
+}
+
+int main(){
+    
+    //values entered
+    /*printf("Enter the balance: ");
+    scanf("%lf",&CDAccount.balance);
+    printf("Enter the interest rate: ");
+    scanf("%lf",&CDAccount.interest_rate);
+    printf("Enter the terms (number of months): ");
+    scanf("%d",&CDAccount.terms);*/
+    
+    //Alternative call a function to enter values
+    input_data(CDAccount);
 
     //call the function
     get_data(CDAccount);
