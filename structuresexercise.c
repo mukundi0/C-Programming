@@ -31,7 +31,7 @@ int main(){
 
 }
 void get_data(struct CDAccount the_account){
-    {
+    
 
     printf("Account terms (number of months): %d\n", the_account.terms);
     
